@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+.sidenav {
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 50px;
+    background: #ffffff;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #2196F3;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #064579;
+}
+
+.main {
+    margin-left: 140px; 
+    font-size: 20px; 
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+div.ex2 {
+    max-width:50%;
+    margin: auto;
+    }
+
+</style>
+    
+ <body>
+
+
+<div class="sidenav"><font face="comic sans MS";>
+  <a href="http://172.19.194.49/student4/">Home</a>
+  <a href="http://172.19.194.49/student4/commands.html">Commands</a>
+  <a href="http://172.19.194.49/student4/sources.html">Sources</a>
+</div>
+
+<div class="ex2">
+
+<font face = "Comic sans MS"; size = "4"; color = "2E64FE">
+
+<center><h1>Linux Commands</h1></center>
+
+<div style = "background-color: #FFF8C6; margin-left: 20px; margin-right: 20px; padding-bottom: 8px; padding-left: 8px; padding-right: 8px; padding-top: 8px;">
+<font face="Lucida Console, monospace"; size = "4">
+<p>ls -al</p>
+</div>
+<font face = "Comic sans MS"; size = "3"; color = "#000000" >
+<ul style = "list-tyle-type:circle">
+<li> List all the files in the directory</p>
+<li>  Example uses: when you want to see if a file was removed or not</p>
+</ul>
+
+<br>
+
+<div style = "background-color: #FFF8C6; margin-left: 20px; margin-right: 20px; padding-bottom: 8px; padding-left: 8px; padding-right:8px; padding-top: 8px;">
+<font face= "Lucida Console, monospace" size ="4"; color = "#2E64FE">
+<p>hostname -I</p>
+</div>
+<font face = "Comic sans MS"; size = "3"; color = "#000000";>
+<ul style = "list-tyle-type:circle">
+<li> Show the IP address of the machine </p>
+<li> Example uses: connect your machine to the SSH app through the IP </p>
+</ul>
+
+<br>
+
+<div style = "background-color: #FFF8C6; margin-left: 20px; margin-right: 20px; padding-bottom: 8px; padding-left: 8px; padding-right: 8px; padding-top: 8px;">
+<font face = "Lucida Console, monospace" size = "4" color = "#2E64FE">
+<p>cd</p>
+</div>
+<font face = "Comic sans MS"; size = "3"; color = "#000000">
+<ul style = "list-tyle-type:circle">
+<li> Takes you to the home directory </p>
+<li> Example uses: for when you want to navigate through your files </p>
+</ul>
+
+<br>
+
+<div style = "background-color: #FFF8C6; margin-left: 20px; margin-right: 20px; padding-bottom: 8px; padding-left: 8px; padding-right: 8px; padding-top: 8px;">
+<font face= "Lucida Console, monospace" size ="4"; color = "#2E64FE">
+<p>mkdir</p>
+</div>
+<font face = "Comic sans MS"; size = "3"; color = "#000000">
+<ul style = "list-tyle-type:disc">
+<li> Creates a new directory </p>
+<li> Example uses: for organizational purposes, like when you want to subdivide file folders</p>
+</ul>
+
+<br>
+
+<div style = "background-color: #FFF8C6; margin-left: 20px; margin-right: 20px; padding-bottom: 8px; padding-left: 8px; padding-right: 8px; padding-top: 8px;">
+<font face= "Lucida Console, monospace" size ="4"; color = "#2E64FE">
+<p>nano [name] </p>
+</div>
+<font face = "Comic sans MS"; size = "3"; color = "#000000">
+<ul style = "list-tyle-type:disc">
+<li> Creates new bash script </p>
+<li> Allows you to access and edit previous scripts </p>
+<li> Example use: change the code of a procedure script you created
+</ul>
+
+<br> 
+
+<div style = "background-color: #FFF8C6; margin-left: 20px; margin-right: 20px; padding-bottom: 8px; padding-left: 8px; padding-right:8px; padding-top: 8px;">
+<font face= "Lucida Console, monospace" size ="4"; color = "#2E64FE">
+<p>rm [name]</p>
+</div>
+<font face = "Comic sans MS"; size = "3"; color = "#000000">
+<ul style = "list-tyle-type:disc">
+<li> Removes specific file</p>
+<li> Example use: organize your files </p>
+</ul> 
+
+<br>
+
+<div style = "background-color: #FFF8C6; margin-left: 20px; margin-right: 20px; padding-bottom: 8px; padding-left: 8px; padding-right:8px; padding-top: 8px;">
+<font face= "Lucida Console, monospace" size ="4"; color = "#2E64FE">
+<p>./[script name] </p>
+</div>
+<font face = "Comic sans MS"; size = "3"; color = "#000000">
+<ul style = "list-tyle-type:disc">
+<li> Executes bash script</p>
+<li> Example use: the rpistatus bash script we created to ping every device in the room </p>
+</ul>
+
+<br>
+
+<div style = "background-color: #FFF8C6; margin-left: 20px; margin-right: 20px; padding-bottom: 8px; padding-left: 8px; padding-right:8px; padding-top: 8px;">
+<font face= "Lucida Console, monospace" size ="4"; color = "#2E64FE">
+<p>git init </p>
+</div>
+<font face = "Comic sans MS"; size = "3"; color = "#000000">
+<ul style = "list-tyle-type:disc">
+<li> Initializes a Git repository</p>
+<li> Example use:when you want to push or pull files to or from GitHub
+</ul> 
+
+<br>
+
+<div style = "background-color: #FFF8C6; margin-left: 20px; margin-right: 20px; padding-bottom: 8px; padding-left: 8px; padding-right:8px; padding-top: 8px;">
+<font face= "Lucida Console, monospace" size ="4"; color = "#2E64FE">
+<p>ssh-keygen </p>
+</div>
+<font face = "Comic sans MS"; size = "3"; color = "#000000">
+<ul style = "list-tyle-type:disc">
+<li> Generates a RSA key</p>
+<li> Example use: allows you to publish the public key and keep the private key so you can protect your online repositories
+</ul>
+
+<br>
+
+<div style = "background-color: #FFF8C6; margin-left: 20px; margin-right: 20px; padding-bottom: 8px; padding-left: 8px; padding-right:8px; padding-top: 8px;">
+<font face= "Lucida Console, monospace" size ="4"; color = "#2E64FE">
+<p>ping [machine name/address]</p>
+</div>
+<font face = "Comic sans MS"; size = "3"; color = "#000000">
+<ul style = "list-tyle-type:disc">
+<li> Ping the designated machine and check for packet loss</p>
+<li> Example use: like in rpistatus, check and see if a machine is alive
+</ul>
+
+<br>
+
+<div style = "background-color: #FFF8C6; margin-left: 20px; margin-right: 20px; padding-bottom: 8px; padding-left: 8px; padding-right:8px; padding-top: 8px;">
+<font face= "Lucida Console, monospace" size ="4"; color = "#2E64FE">
+<p>cat [name] </p>
+</div>
+<font face = "Comic sans MS"; size = "3"; color = "#000000">
+<ul style = "list-tyle-type:disc">
+<li> Allows for the viewing of a file</p>
+<li> Example use: convenient checking of a file's contents
+</ul>
+
+<br>
+
+<div style = "background-color: #FFF8C6; margin-left: 20px; margin-right: 20px; padding-bottom: 8px; padding-left: 8px; padding-right:8px; padding-top: 8px;">
+<font face= "Lucida Console, monospace" size ="4"; color = "#2E64FE">
+<p>echo [text] </p>
+</div>
+<font face = "Comic sans MS"; size = "3"; color = "#000000">
+<ul style = "list-tyle-type:disc">
+<li> Displays the text following the command</p>
+<li> Example use: allows for results to be displayed, for instance in the bash script rpistatus
+</ul>
+
+<br>
+
+<body style = "background-color:#CCEAFF">
+
+</body>
+</html>
+
