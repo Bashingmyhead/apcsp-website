@@ -1,73 +1,64 @@
 #include <stdio.h>
 #include <string.h>
 
-char arrPrompt[4][100] = {"name","gender (M/F)","age","weight"};
-char arrInput[4][100];
+char gender[256];
+char weight[256];
+int W;
 
-void verify(char prompt[], char input[])
+void verifyGender(char input[])
 {
-char buffer[256];
-	if (strcmp(prompt, "gender (M/F)") == 0 )
-	{
-		while(1)
-		{
-		if (!(strcmp(input, "F") == 0) && !(strcmp(input, "M") == 0))
-		{
-			printf("Please type and M or F for your gender\n");
-			fgets(buffer, 256, stdin);
-			sscanf(buffer, "%s", input);
-			verify("name", input);
-		}
-			else {break;}
-		}
-	}
-	if (strcmp(prompt, "age") == 0 || strcmp(prompt, "weight") == 0)
-	{
-		char q[256];
-		while(1)
-		{
-		if (sscanf(input, "%d", buffer) != 1)
-		{
-			printf("Please input a valid integer\n");
-			fgets(buffer, 256, stdin);
-			sscanf(buffer, "%s", input);
-			verify(q, input);
-		}
-			else {break;}
-		}
-	}
+                if (!(strcmp(input, "F") == 0) && !(strcmp(input, "M") == 0) == 0 )
+                {
+                        printf("Please type and M or F for your gender\n");
+			return 1;
+                }
+
 }
 
-float Water (char gender[], char weight[])
+void verifyWeight(char input[])
+{
+
+		if (sscanf(input, "%d", weight) != 1)
+		{
+			printf("Please input a valid integer\n");
+			return 1;
+		}
+		else { sscanf(weight, "%d", &W);}
+}
+
+
+float Water (char gender[], int weight)
 {
 	float water;
-	float W;
-	//how do I get the char weight into a float so I can multiply this 
-	sscanf(weight, "%f", &W);
+
 	if (strcmp(gender, "M") == 0)
 	{
-		water = W * 0.6;
+		water = weight * 0.6;
 	}
 	if (strcmp(gender, "F") == 0)
 	{
-		water = W * 0.5;
+		water = weight * 0.5;
 	}
-	printf("You need to drink %f ounces of water a day\n", water);
+	printf("%f\n", water);
 }
 
-int main()
+int main(int argc, char* argv[])
 {
-        char input[256];
-
-        printf("Welcome! Please input your information\n");
-
-	for (int i=0; i<4; i++)
+	char prompt [2][10] = {"gender","weight"};
+	for (int i = 1; i < 3; i++)
 	{
-		printf("Enter your %s:\n", arrPrompt[i]);
-		fgets(input, 256, stdin);
-		sscanf(input, "%s", arrInput[i]);
-		verify(arrPrompt[i], arrInput[i]);
+	sscanf(argv[i], "%s", prompt[i-1]);
 	}
 
-	Water (arrInput[1], arrInput[3]);
+	sscanf(prompt[0], "%s", gender);
+	sscanf(prompt[1], "%s", weight);
+
+	verifyGender(gender);
+	verifyWeight(weight);
+
+	sscanf(weight, "%d", &W);
+
+	Water (gender, W);
+
+	return 0;
 }
