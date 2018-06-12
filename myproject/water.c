@@ -3,29 +3,10 @@
 
 char gender[256];
 char weight[256];
+char buffer[256];
 int W;
-
-void verifyGender(char input[])
-{
-                if (!(strcmp(input, "F") == 0) && !(strcmp(input, "M") == 0) == 0 )
-                {
-                        printf("Please type and M or F for your gender\n");
-			return 1;
-                }
-
-}
-
-void verifyWeight(char input[])
-{
-
-		if (sscanf(input, "%d", weight) != 1)
-		{
-			printf("Please input a valid integer\n");
-			return 1;
-		}
-		else { sscanf(weight, "%d", &W);}
-}
-
+int count;
+char verify[] = "MmFf";
 
 float Water (char gender[], int weight)
 {
@@ -39,26 +20,38 @@ float Water (char gender[], int weight)
 	{
 		water = weight * 0.5;
 	}
-	printf("%f\n", water);
+	printf("%f ounces of water per day\n", water);
 }
 
 int main(int argc, char* argv[])
 {
-	char prompt [2][10] = {"gender","weight"};
-	for (int i = 1; i < 3; i++)
+	sscanf(argv[1], "%s", gender);
+	sscanf(argv[2], "%s", weight);
+
+	//verify gender
+	int count = 1;
+	for (int i = 0; i<4; i++)
 	{
-	sscanf(argv[i], "%s", prompt[i-1]);
+		if (gender[0] == verify[i])
+		{
+			count = 0;
+		}
 	}
 
-	sscanf(prompt[0], "%s", gender);
-	sscanf(prompt[1], "%s", weight);
+	if (count == 1)
+	{
+		printf("Please input a valid gender\n");
+		return 1;
+	}
 
-	verifyGender(gender);
-	verifyWeight(weight);
-
-	sscanf(weight, "%d", &W);
+	//verify weight
+	if (sscanf(weight, "%d", buffer) != 1)
+	{
+		printf("Please input a valid integer\n");
+		return 1;
+	}
+	else {sscanf(weight, "%d", &W);}
 
 	Water (gender, W);
 
-	return 0;
 }
