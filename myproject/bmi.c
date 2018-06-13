@@ -25,7 +25,7 @@ if (strcmp(Info, "gender") == 0)
 		else {break;}
 	}
 }
-if (strcmp(Info, "age") == 0 || strcmp(Info, "weight") == 0 || strcmp(Info, "height (ft)") == 0 || strcmp(Info, "height (in)") == 0)
+if (strcmp(Info, "weight") == 0 || strcmp(Info, "heightft") == 0 || strcmp(Info, "heightin") == 0 || strcmp(Info, "age") == 0)
 {
 	while(1)
 	{
