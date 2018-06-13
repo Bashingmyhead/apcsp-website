@@ -27,7 +27,6 @@ if (strcmp(Info, "gender") == 0)
 }
 if (strcmp(Info, "age") == 0 || strcmp(Info, "weight") == 0 || strcmp(Info, "height (ft)") == 0 || strcmp(Info, "height (in)") == 0)
 {
-	char d[100];
 	while(1)
 	{
 	if (sscanf(Input, "%d", holding) == 0)
